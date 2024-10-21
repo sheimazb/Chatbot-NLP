@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --text-color: #181717;
+    --title-color: #161616; 
+    /* autres variables... */
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 210 20% 98%;
+    --text-color: #080808;
+    --title-color: #9e9e9e;
+    /* autres variables... */
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+@keyframes livePulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.live-pulse {
+  animation: livePulse 1s infinite;
+}
